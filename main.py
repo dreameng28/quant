@@ -9,3 +9,6 @@ def get_shen_stock_list():
 
 def get_stock_info():
     pass
+
+def main():
+    pass
