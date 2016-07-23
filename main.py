@@ -12,3 +12,6 @@ def get_stock_info():
 
 def main():
     pass
+
+def hahah():
+    pass
