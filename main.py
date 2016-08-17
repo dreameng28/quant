@@ -5,6 +5,8 @@ import leancloud
 from leancloud import Object
 import numpy as np
 import matplotlib.pyplot as plt
+import datetime
+import time
 import urllib
 import pylab
 
@@ -68,13 +70,21 @@ def get_detail(url):
     if len(cost) != 0:
         cost = cost[0][6:].strip()
 
+    date = re.findall(u'发表于 (.*?)</em>', content, re.S)
+    if len(date) != 0:
+        date = date[0].strip()
+        date = re.findall('(\d+-\d+-\d+ \d+:\d+:\d+)', date, re.S)
+        if len(date) != 0:
+            date = datetime.datetime.strptime(date[0], '%Y-%m-%d %H:%M:%S')
+
     # description = re.findall(u'id="postmessage_\d+">(.*?)</table>', content, re.S)
     # if len(description) != 0:
     #     description = description[0][6:]
 
-    print(title, '\n', position, '\n', name, '\n', age, '\n', height, '\n', items, '\n', cost, '\n', url)
+    print(date, '\n', title, '\n', position, '\n', name, '\n', age, '\n', height, '\n', items, '\n', cost, '\n', url)
     try:
         mz = MZObject()
+        mz.set('date', date)
         mz.set('title', title)
         mz.set('name', name)
         mz.set('position', position)
@@ -297,7 +307,7 @@ def barGraph(wcDict):
     plt.show()
 
 
-leancloud.init('sgfKhqxiz3u8C46F4A9Myyjv-gzGzoHsz', 'nzVh0qbHmRLSd4w2zkk1DL6R')
+leancloud.init('Qj5yrVm9VGDeq2Yloi2fOKXJ-gzGzoHsz', 'RqpSNbWFsDgNH7ttR43yqdag')
 query = leancloud.Query('MZObject')
 
 # my_dict = my_query2()
