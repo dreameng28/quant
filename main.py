@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import urllib
 import pylab
 
-cookies_str = 'Dyj_2132_lastvisit=1471262347; fDyj_2132_visitedfid=40D39D50; fDyj_2132_ulastactivity=caffLhiEhoYyoFpZ8ZJry8Z6TBdaZlDAEZpttpxM89f%2F9LiDfjb6; fDyj_2132_lastcheckfeed=63340%7C1471346573; fDyj_2132_member_login_status=1; fDyj_2132_viewid=tid_14149; fDyj_2132_sid=EAgld6; Hm_lvt_ef6071de284645b5fb2dee7870f09876=1471265950; Hm_lpvt_ef6071de284645b5fb2dee7870f09876=1471346578; fDyj_2132_noticeTitle=1; fDyj_2132_smile=1D1; fDyj_2132_lastact=1471346575%09misc.php%09patch; tjpctrl=1471348380399'
+cookies_str = '__cfduid=db094ef2f3beedc20886b275d7b63562c1471265946; tjpctrl=1471444728281; fDyj_2132_saltkey=UwpNz3YN; fDyj_2132_lastvisit=1471439439; fDyj_2132_sendmail=1; Hm_lvt_ef6071de284645b5fb2dee7870f09876=1471265950; Hm_lpvt_ef6071de284645b5fb2dee7870f09876=1471443041; fDyj_2132_lastact=1471443070%09member.php%09logging; fDyj_2132_ulastactivity=c7b927rhUdTCy4D9lAZZU1etnuzgT2U3B2qlZSXrCcRQt4R%2FEt1H; fDyj_2132_sid=oSaHL6; fDyj_2132_auth=fca8RdT77ViEyzQ1VWJnhM1M43mpSmV21wScIoNWGAyGvNWFZ%2FghoJSrYGzk8sm%2B5Va169x2KFNgtrQUzx93bPw9uA; fDyj_2132_lastcheckfeed=63340%7C1471443070; fDyj_2132_checkfollow=1; fDyj_2132_lip=108.162.215.202%2C1471442736'
 cookies_list = cookies_str.split(';')
 cookies = {}
 for each in cookies_list:
@@ -300,18 +300,18 @@ def barGraph(wcDict):
 leancloud.init('sgfKhqxiz3u8C46F4A9Myyjv-gzGzoHsz', 'nzVh0qbHmRLSd4w2zkk1DL6R')
 query = leancloud.Query('MZObject')
 
-my_dict = my_query2()
-my_dict = sorted(my_dict.items(), key=lambda d: d[0], reverse=False)
-# my_dict = my_dict[:10]
-print(len(my_dict))
-for each in my_dict:
-    print(each[0], ': ', each[1])
+# my_dict = my_query2()
+# my_dict = sorted(my_dict.items(), key=lambda d: d[0], reverse=False)
+# # my_dict = my_dict[:10]
+# print(len(my_dict))
+# for each in my_dict:
+#     print(each[0], ': ', each[1])
 
 # my_dict = my_dict[:20]
-barGraph(my_dict)
+# barGraph(my_dict)
 
 
-# main()
+main()
 
 # index_content = requests.get('http://www.xianchawang.org/forum-50-1.html').content
 # index_content = str(index_content).decode('gbk')

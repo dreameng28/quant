@@ -53,7 +53,7 @@ while len(query_list) > 0:
 
         title = str(each.get('title'))
 
-        if cost <= 200 and age <= 44 and height >= 167:
+        if cost == 300 and age <= 44 and height >= 168:
             name = str(each.get('name'))
             print(title)
             print(name, height, age, cost)
